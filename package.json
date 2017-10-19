@@ -1,0 +1,53 @@
+{
+  "name": "egg-ons",
+  "version": "1.0.0",
+  "description": "aliyun ons plugin for egg",
+  "eggPlugin": {
+    "name": "ons"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin"
+  ],
+  "dependencies": {
+    "ali-ons": "^2.0.2"
+  },
+  "devDependencies": {
+    "autod": "^2.10.1",
+    "autod-egg": "^1.0.0",
+    "egg": "^1.9.0",
+    "egg-bin": "^4.3.5",
+    "egg-mock": "^3.13.1",
+    "eslint": "^4.9.0",
+    "eslint-config-egg": "^5.1.1",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "egg-bin pkgfiles --check && npm run lint && npm run cov",
+    "pkgfiles": "egg-bin pkgfiles",
+    "autod": "autod"
+  },
+  "files": [
+    "app",
+    "app.js",
+    "config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggjs/egg-ons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eggjs/egg/issues"
+  },
+  "homepage": "https://github.com/eggjs/egg-ons#readme",
+  "author": "gxcsoccer <gxcsoccer@126.com>",
+  "license": "MIT"
+}
