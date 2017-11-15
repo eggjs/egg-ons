@@ -50,13 +50,13 @@ exports.ons = {
     // dev： http://onsaddr-internet.aliyun.com/rocketmq/nsaddr4client-internet
     // onsAddr: 'http://onsaddr-internet.aliyun.com/rocketmq/nsaddr4client-internet',
   },
-  subs: [{
+  sub: [{
     consumerGroup: 'your-consumer-group',
     topics: [
       'your-topic',
     ],
   }],
-  pubs: [{
+  pub: [{
     producerGroup: 'your-producer-group',
     topics: [
       'your-topic',
