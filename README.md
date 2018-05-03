@@ -123,6 +123,35 @@ const msg = new Message('TP_NAME', // topic
 const sendResult = yield ctx.ons.send(msg);
 ```
 
+## Dynamic Create Consumer and Producer
+
+You can dynamic create comsumer or producer by your self.
+
+```js
+// app.js
+
+module.exports = app => {
+  app.beforeStart(function* () {
+    // dynamic create a consumer, and subscribe topics use the subscriber in the second argument
+    yield app.createConsumer({
+      consumerGroup: 'consumerGroup',
+      topics: [
+        'TEST_TOPIC',
+      ],
+    }, {
+      TEST_TOPIC: require('./ops/TEST_TOPIC'), // the subscriber for TEST_TOPIC
+    });
+    // dynamic create a producer
+    yield app.createProducer({
+      producerGroup: config.producerGroup,
+      topics: [
+        'TEST_TOPIC',
+      ],
+    });
+  });
+};
+```
+
 ## Questions & Suggestions
 
 Please open an issue [here](https://github.com/eggjs/egg/issues).

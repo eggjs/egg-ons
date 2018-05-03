@@ -3,28 +3,57 @@
 const mm = require('egg-mock');
 
 describe('test/ons.test.js', () => {
-  let app;
-  before(() => {
-    app = mm.app({
-      baseDir: 'apps/ons-test',
+  describe('init', () => {
+    let app;
+    before(() => {
+      app = mm.app({
+        baseDir: 'apps/ons-test',
+      });
+      return app.ready();
     });
-    return app.ready();
+
+    after(() => app.close());
+    afterEach(mm.restore);
+
+    it('should GET /', () => {
+      return app.httpRequest()
+        .get('/')
+        .expect('hi, ons')
+        .expect(200);
+    });
+
+    it('should GET /sendMessage', () => {
+      return app.httpRequest()
+        .get('/sendMessage')
+        .expect('ok')
+        .expect(200);
+    });
   });
 
-  after(() => app.close());
-  afterEach(mm.restore);
+  describe('dynamic', () => {
+    let app;
+    before(() => {
+      app = mm.app({
+        baseDir: 'apps/ons-test-dynamic',
+      });
+      return app.ready();
+    });
 
-  it('should GET /', () => {
-    return app.httpRequest()
-      .get('/')
-      .expect('hi, ons')
-      .expect(200);
-  });
+    after(() => app.close());
+    afterEach(mm.restore);
 
-  it('should GET /sendMessage', () => {
-    return app.httpRequest()
-      .get('/sendMessage')
-      .expect('ok')
-      .expect(200);
+    it('should GET /', () => {
+      return app.httpRequest()
+        .get('/')
+        .expect('hi, ons')
+        .expect(200);
+    });
+
+    it('should GET /sendMessage', () => {
+      return app.httpRequest()
+        .get('/sendMessage')
+        .expect('ok')
+        .expect(200);
+    });
   });
 });
