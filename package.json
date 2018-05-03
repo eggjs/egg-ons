@@ -37,8 +37,9 @@
   },
   "files": [
     "app",
+    "config",
     "app.js",
-    "config"
+    "lib"
   ],
   "repository": {
     "type": "git",
