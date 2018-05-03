@@ -17,9 +17,9 @@ module.exports = app => {
     const sendResult = yield this.ons.send(msg);
     assert.equal(sendResult.sendStatus, 'SEND_OK');
 
-    yield sleep(3000);
-
-    assert(app.onsMsgs.has(sendResult.msgId));
+    while (!app.onsMsgs.has(sendResult.msgId)) {
+      yield sleep(100);
+    }
     this.body = 'ok';
   });
 };
