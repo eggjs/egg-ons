@@ -6,7 +6,7 @@ class TestSubscriber {
     this.app = ctx.app;
   }
 
-  * subscribe(msg) {
+  async subscribe(msg) {
     this.app.onsMsgs.set(msg.msgId, msg);
   }
 }
