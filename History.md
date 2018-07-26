@@ -1,4 +1,10 @@
 
+2.0.0 / 2018-07-26
+==================
+
+**others**
+  * [[`3a3b039`](http://github.com/eggjs/egg-ons/commit/3a3b03924d55210be49561fb84cfc0b8f2971ac3)] - refactor: use async await (Yiyu He <<dead_horse@qq.com>>)
+
 1.1.0 / 2018-05-03
 ==================
 
