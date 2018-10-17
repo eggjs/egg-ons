@@ -15,14 +15,14 @@ module.exports = appInfo => {
         // 杭州金融云环境：http://jbponsaddr-internal.aliyun.com:8080/rocketmq/nsaddr4client-internal
         // 杭州深圳云环境：http://mq4finance-sz.addr.aliyun.com:8080/rocketmq/nsaddr4client-internal
         onsAddr: 'http://onsaddr-internet.aliyun.com/rocketmq/nsaddr4client-internet',
-        // accessKey: 'your-accesskey',
-        // secretKey: 'your-secretkey',
+        // accessKeyId: 'your-accessKeyId',
+        // accessKeySecret: 'your-accessKeySecret',
       },
       sub: [
         // {
         //   consumerGroup: 'your-group',
-        //   accessKey: 'your-accesskey',
-        //   secretKey: 'your-secretkey',
+        //   accessKeyId: 'your-accessKeyId',
+        //   accessKeySecret: 'your-accessKeySecret',
         //   topics: [
         //     'your-topic-1',
         //     'your-topic-2',
@@ -32,8 +32,8 @@ module.exports = appInfo => {
       pub: [
         // {
         //   producerGroup: 'your-group',
-        //   accessKey: 'your-accesskey',
-        //   secretKey: 'your-secretkey',
+        //   accessKeyId: 'your-accessKeyId',
+        //   accessKeySecret: 'your-accessKeySecret',
         //   topics: [
         //     'your-topic-1',
         //     'your-topic-2',
