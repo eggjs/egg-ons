@@ -44,8 +44,8 @@ exports.ons = {
 // {app_root}/config/config.default.js
 exports.ons = {
   default: {
-    accessKey: 'your-accessKey',
-    secretKey: 'your-secretKey',
+    accessKeyId: 'your-accessKeyId',
+    accessKeySecret: 'your-accessKeySecret',
     // prod：http://onsaddr-internal.aliyun.com:8080/rocketmq/nsaddr4client-internal
     // dev： http://onsaddr-internet.aliyun.com/rocketmq/nsaddr4client-internet
     // onsAddr: 'http://onsaddr-internet.aliyun.com/rocketmq/nsaddr4client-internet',
