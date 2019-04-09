@@ -10,6 +10,7 @@ module.exports = appInfo => {
      */
     ons: {
       default: {
+        autoClose: true,
         // 公有云生产环境：http://onsaddr-internal.aliyun.com:8080/rocketmq/nsaddr4client-internal
         // 公有云公测环境：http://onsaddr-internet.aliyun.com/rocketmq/nsaddr4client-internet
         // 杭州金融云环境：http://jbponsaddr-internal.aliyun.com:8080/rocketmq/nsaddr4client-internal

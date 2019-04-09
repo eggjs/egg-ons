@@ -11,7 +11,8 @@
     "egg-plugin"
   ],
   "dependencies": {
-    "ali-ons": "^3.0.0"
+    "ali-ons": "^3.0.0",
+    "pure-func": "^1.1.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
